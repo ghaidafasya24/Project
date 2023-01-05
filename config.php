@@ -2,6 +2,16 @@
 
     $connect = mysqli_connect("localhost", "root", "", "vote"); ;
 
+    function query($query) {
+        global $connect;
+        $result = mysqli_query($connect, $query);
+        $row = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $rows[] = $row;
+        }
+        return $rows;
+    }
+
     function regis($data) {
         global $connect;
         
@@ -33,10 +43,29 @@
 
 
         //tambahkan user baru 
-        mysqli_query($connect, "INSERT INTO user VALUES ('', '$username', '$password')");
+        mysqli_query($connect, "INSERT INTO user VALUES ('', '$username', '$password', '')");
 
         return mysqli_affected_rows($connect);
 
+    }
+
+
+    function tambah($data) {
+        global $connect;
+
+        $id_kandidat = $data["id_kandidat"];
+        $nama_kandidat = $data["nama_kandidat"];
+        $npm = $data["npm"];
+        $jabatan = $data["jabatan"];
+        $visi_misi = $data["visi_misi"];
+        $prodi = $data["prodi"];
+        $img = $data["img"];
+
+        // query insert 
+        $query = "INSERT INTO kandidat VALUES ('$id_kandidat','$nama_kandidat','$npm','$jabatan','$visi_misi','$prodi','$img')";
+        mysqli_query($connect,$query);
+
+        return mysqli_affected_rows($connect);
     }
 
 

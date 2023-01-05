@@ -1,3 +1,10 @@
+<?php 
+ require '../../config.php';
+
+ $kandidat = query("SELECT * FROM kandidat");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,19 +92,23 @@
             </thead>
       
             <tbody>
+            <?php $i = 1; ?>
+            <?php foreach ($kandidat as $row) : ?>
               <tr>   
-                  <th scope="row">1</th>
-                  <td>192010394</td>
+                  <th scope="row"><?= $i; ?></th>
+                  <td><?= $row["id_kandidat"]; ?></td>
                   <td><img src="../../assets/images/profile.png" alt="" width="100" height="100"></td>
-                  <td>Ghaida Fasya</td>
-                  <td>Ketua</td>
-                  <td>714220031</td>
-                  <td></td>
-                  <td>D4 Teknik Informatika</td>
+                  <td><?= $row["nama_kandidat"]; ?></td>
+                  <td><?= $row["jabatan"]; ?></td>
+                  <td><?= $row["npm"]; ?></td>
+                  <td><?= $row["visi_misi"]; ?></td>
+                  <td><?= $row["prodi"]; ?></td>
                   <td><a href="../data-kandidat/detail.php" class="btn btn-primary">Detail</a></td>
               <td><a href="../data-kandidat/update.php"><i class="fas fa-edit bg-success p-2 text-white rounded" data-toggle="tooltip" title="Edit"></i></a></td>
               <td><a href="#"><i class="fas fa-trash-alt bg-danger p-2 text-white rounded" data-toggle="tooltip" title="Delete"></i></a></td>
               </tr>
+              <?php $i++ ?>
+              <?php endforeach; ?>
             </tbody>
             </table>
   

@@ -66,7 +66,7 @@
       <h3><i class="fa-solid fa-clipboard"></i> DETAIL DATA KANDIDAT </h3><br>
 
       <div class="col-md-10 p-1 pt-3 text-secondary">
-                 <h6> Detail Data Kandidat</h6>   
+                 <h6>Detail Data Kandidat</h6>   
              </div>
              <form action="" method="post">
                 <fieldset disabled>
@@ -88,7 +88,7 @@
                            <input type="text" name="prodi" id="prodi" class="form-control" value="D4 Teknik Informatika">
                        </div>
                        <div class="mb-3">    
-                           <label for="inputpassword5" class="form-label text-dark">Jabatan</label>
+                           <label for="disabledTextInput" class="form-label text-dark">Jabatan</label>
                            <br>
                            <select id="disabledSelect" class="form-label text-dark">
                                <option>Ketua</option>

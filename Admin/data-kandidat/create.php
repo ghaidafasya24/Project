@@ -1,3 +1,23 @@
+<?php 
+require '../../config.php';
+
+if(isset($_POST["submit"])) {
+
+    if (tambah($_POST) > 0) {
+        echo "<script>
+			alert('Data berhasil ditambahkan');
+            window.location.href = 'kandidat.php';
+			</script>";
+
+    } else{
+        echo "<script>
+			alert('Data gagal ditambahkan');
+			</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +92,7 @@
                 <fieldset disabled></fieldset>
                  <div class="mb-3">    
                      <label for="id_kandidat" class="form-label text-dark">ID Kandidat</label>
-                     <input type="text" name="id_kandidat" id="id_kandidat" required class="form-control" placeholder="Masukkan id kandidat">
+                     <input type="number" name="id_kandidat" id="id_kandidat" required class="form-control" placeholder="Masukkan id kandidat">
                  </div>
                  <div class="mb-3">    
                      <label for="TextInput" class="form-label text-dark">Nama Kandidat</label>
@@ -84,12 +104,30 @@
                        </div>
                        <div class="mb-3">    
                            <label for="img" class="form-label text-dark">Program Studi</label>
-                           <input type="text" name="prodi" id="prodi" class="form-control" placeholder="Masukkan prodi">
+                           <br>
+                           <select id="disabledSelect" class="form-label form-control text-dark" name="prodi">
+                               <option hidden aria-disabled="">Pilih Program Studi</option>
+                               <option>D3 Teknik Informatika</option>
+                               <option>D3 Akuntansi</option>
+                               <option>D3 Manajemen Bisnis</option>
+                               <option>D3 Logistik Bisnis</option>
+                               <option>D3 Manajemen Informatika</option>
+                               <option>D4 Teknik Informatika</option>
+                               <option>D4 Akuntansi</option>
+                               <option>D4 Manajemen Bisnis</option>
+                               <option>D4 Logistik Bisnis</option>
+                               <option>D4 E-Commerce Logistik</option>
+                               <option>S1 Sains Data</option>
+                               <option>S1 Manajemen Transportasi</option>
+                               <option>S1 Bisnis Digital</option>
+                               <option>S1 Manajemen Rekayasa</option>
+                               <option>S1 Manajemen Logistik</option>
+                            </select>
                        </div>
                        <div class="mb-3">    
-                           <label for="inputpassword5" class="form-label text-dark">Jabatan</label>
+                           <label for="inputpassword5" name="jabatan" id="prodi" class="form-label text-dark">Jabatan</label>
                            <br>
-                           <select id="disabledSelect" class="form-label text-dark">
+                           <select id="disabledSelect" class="form-label form-control text-dark" name="jabatan">
                                <option hidden aria-disabled="">Pilih Jabatan</option>
                                <option>Ketua</option>
                                <option>Wakil</option>
@@ -107,7 +145,7 @@
                         </div>
                     </div>
                  <div class="mb-3">
-                 <a href="#" type="submit" name="submit" class="btn btn-info text-light">Submit</a>
+                 <button type="submit" name="submit" class="btn btn-info text-light">Submit</button>
                  <a href="../data-kandidat/kandidat.php" class="btn btn-success">Kembali</a> 
              </form>
       

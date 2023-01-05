@@ -21,13 +21,32 @@
             if ($verify) {
                     // header("location: ../Mahasiswa/dashboard/dashboard");
                     echo "<script>
-                            window.location.href = '../Mahasiswa/dashboard/dashboard.php'                    
+                            window.location.href = '../Mahasiswa/dashboard/dashboard.php'  
+                            alert('Login sebagai Mahasiswa berhasil');                  
                         </script>" ;
                 exit;
             }
 
         }
-        $error = true;
+        // $error = true;
+        $result2 = mysqli_query($connect,"SELECT * FROM user WHERE username = '$username' AND password = '$password'");
+        $cek = mysqli_num_rows($result2);
+
+        if ($cek > 0) {
+            global $result2;
+    
+            $data = mysqli_fetch_assoc($result2);
+    
+            if ($data["level"] === "admin") {
+    
+                echo "<script>
+                        window.location.href = '../admin/dashboard/dashboard.php'
+                        alert('Login sebagai Admin berhasil');
+                    </script>"; 
+            }
+        }
+
+
 
     }
 

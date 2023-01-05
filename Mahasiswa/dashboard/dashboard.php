@@ -67,31 +67,21 @@
     <h3><i class="fas fa-tachometer-alt mr-2"></i> DASHBOARD </h3>
     <div class="row text-white">
 
-    <!-- <div class="card col-4 bg-danger mr-2">
-        <div class="card-body">
-          <h5 class="card-title">DATA KANDIDAT</h5>
-          
-          <div class="d-flex justify-content-end pl-5">
-          <i class="fa-solid fa-users fa-3x"></i>
-          </div> -->
-          <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
-            <!-- <a href="kandidat.php" class="btn btn-outline-secondary btn-info"><p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>            
-        </div>
-      </div> -->
-      
-    <!-- <div class="card col-4 bg-primary mr-2">
-        <div class="card-body">
-          <h5 class="card-title">POLLING</h5>
-          
-          <div class="d-flex justify-content-end pl-5">
-          <i class="fa-solid fa-users fa-3x"></i>
-          </div> -->
+    <div class="row ms-auto text-white">
+            <div class="card w-25 col-2 bg-danger mr-2 me-5">
+                <div class="card-body">
+                    <h5 class="card-title">VOTE</h5>
 
-          <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
-
-            <!-- <a href="pelanggan.php" class="btn btn-outline-secondary btn-info"><p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>            
-        </div>
-      </div> -->
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-envelope-open-text fa-3x"></i>
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+    
     <!-- dashboard end  -->
 
 

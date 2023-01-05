@@ -21,13 +21,13 @@
 
 
     <!-- content navbar -->
-    <nav>
+    <nav class="sidebar">
         <!-- content sidebar  -->
-        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+        <button class="btn btn-dark ms-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
-                
-                <a class="offcanvas-title" href="" >
+
+                <a class="offcanvas-title" href="">
                     <img src="../../assets/images/logo-ulbi.png" alt="" width="140" height="50">
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -49,7 +49,7 @@
                 </ul>
             </div>
             <!-- sidebar end  -->
-            
+
         </div>
         <div class="judul">
             <h2>E-VOTING PRESIDEN MAHASISWA ULBI</h>
@@ -61,43 +61,60 @@
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul> -->
-            <img src="../../assets/images/logo-ulbi.png" alt="" width="150" height="50">
+            <img src="../../assets/images/logo-ulbi.png" alt="" class="me-5" width="150" height="50">
         </div>
     </nav>
     <!-- navbar end -->
 
     <!-- content dashboard --> <br>
-    <div class="col-md-10 p-5 pt-2">
-    <h3><i class="fas fa-tachometer-alt mr-2"></i> DASHBOARD </h3>
-    <div class="row text-white">
+    <div class="col-md-15 p-5 pt-2">
+        <h3><i class="fas fa-tachometer-alt mr-2"></i> DASHBOARD </h3>
+        <div class="row ms-auto text-white">
+            <div class="card w-25 col-2 bg-danger mr-2 me-5">
+                <div class="card-body">
+                    <h5 class="card-title">DATA KANDIDAT</h5>
 
-    <!-- <div class="card col-4 bg-danger mr-2">
-        <div class="card-body">
-          <h5 class="card-title">DATA KANDIDAT</h5>
-          
-          <div class="d-flex justify-content-end pl-5">
-          <i class="fa-solid fa-users fa-3x"></i>
-          </div> -->
-          <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
-            <!-- <a href="kandidat.php" class="btn btn-outline-secondary btn-info"><p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>            
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-clipboard fa-3x"></i> 
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card w-25 col-2 bg-warning mr-2 me-5">
+                <div class="card-body">
+                    <h5 class="card-title">DATA MAHASISWA</h5>
+
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-users fa-3x"></i>
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card w-25 col-2 bg-success mr-2">
+                <div class="card-body">
+                    <h5 class="card-title">LAPORAN HASIL VOTE</h5>
+
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-envelope-open-text fa-3x"></i>
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+
         </div>
-      </div> -->
-      
-    <!-- <div class="card col-4 bg-primary mr-2">
-        <div class="card-body">
-          <h5 class="card-title">POLLING</h5>
-          
-          <div class="d-flex justify-content-end pl-5">
-          <i class="fa-solid fa-users fa-3x"></i>
-          </div> -->
-
-          <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
-
-            <!-- <a href="pelanggan.php" class="btn btn-outline-secondary btn-info"><p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>            
-        </div>
-      </div> -->
-    <!-- dashboard end  -->
-
+        <!-- dashboard end  -->
+    </div>
 
 </body>
 
