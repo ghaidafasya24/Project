@@ -1,20 +1,20 @@
 <?php 
-require '../../config.php';
+// require '../../config.php';
 
-if(isset($_POST["submit"])) {
+// if(isset($_POST["submit"])) {
 
-    if (tambah($_POST) > 0) {
-        echo "<script>
-			alert('Data berhasil ditambahkan');
-            window.location.href = 'kandidat.php';
-			</script>";
+//     if (tambah($_POST) > 0) {
+//         echo "<script>
+// 			alert('Data berhasil ditambahkan');
+//             window.location.href = 'kandidat.php';
+// 			</script>";
 
-    } else{
-        echo "<script>
-			alert('Data gagal ditambahkan');
-			</script>";
-    }
-}
+//     } else{
+//         echo "<script>
+// 			alert('Data gagal ditambahkan');
+// 			</script>";
+//     }
+// }
 
 ?>
 

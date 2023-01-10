@@ -21,7 +21,7 @@
             if ($verify) {
                     // header("location: ../Mahasiswa/dashboard/dashboard");
                     echo "<script>
-                            window.location.href = '../Mahasiswa/dashboard/dashboard.php'  
+                            window.location.href = '../Mahasiswa/vote.php'  
                             alert('Login sebagai Mahasiswa berhasil');                  
                         </script>" ;
                 exit;

@@ -19,17 +19,20 @@
 
 <body>
 
+
     <!-- content navbar -->
-    <nav>
-        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
-
-
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <nav class="sidebar">
+        <!-- content sidebar  -->
+        <button class="btn btn-dark ms-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+        <div class="offcanvas offcanvas-start w-25" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
-                <a class="offcanvas-title" href=""><img src="../../assets/images/logo-ulbi.png" alt="" width="140" height="50"></a>
+
+                <a class="offcanvas-title" href="">
+                    <img src="../../assets/images/logo-ulbi.png" alt="" width="140" height="50">
+                </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <!-- content sidebar -->
+
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="navbar-item"><a href="../profile-admin/profile.php" class="nav-link active"> <i class="fa-solid fa-user"></i> Profile</a></li>
@@ -46,6 +49,7 @@
                 </ul>
             </div>
             <!-- sidebar end  -->
+
         </div>
         <div class="judul">
             <h2>E-VOTING PRESIDEN MAHASISWA ULBI</h>
@@ -57,60 +61,60 @@
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul> -->
-            <img src="../../assets/images/logo-ulbi.png" alt="" width="80" height="50">
+            <img src="../../assets/images/logo-ulbi.png" alt="" class="me-5" width="150" height="50">
         </div>
     </nav>
     <!-- navbar end -->
 
-    <div class="col-md-10 p-5 pt-2"><br>
-        <h3><i class="fa-solid fa-clipboard"></i> EDIT DATA KANDIDAT </h3><br>
+    <!-- content dashboard --> <br>
+    <div class="col-md-15 p-5 pt-2">
+        <h3><i class="fas fa-tachometer-alt mr-2"></i> DASHBOARD </h3>
+        <div class="row ms-auto text-white">
+            <div class="card w-25 col-2 bg-danger mr-2 me-5">
+                <div class="card-body">
+                    <h5 class="card-title">DATA KANDIDAT</h5>
 
-        <div class="col-md-10 p-1 pt-3 text-secondary">
-            <h6> Edit Data Kandidat</h6>
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-clipboard fa-3x"></i> 
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card w-25 col-2 bg-warning mr-2 me-5">
+                <div class="card-body">
+                    <h5 class="card-title">DATA MAHASISWA</h5>
+
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-users fa-3x"></i>
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card w-25 col-2 bg-success mr-2">
+                <div class="card-body">
+                    <h5 class="card-title">LAPORAN HASIL VOTE</h5>
+
+                    <div class="d-flex justify-content-end pl-5">
+                    <i class="fa-solid fa-envelope-open-text fa-3x"></i>
+                    </div>
+                    <!-- <div class="display-4" style="margin-top: -50px;">7</div> -->
+                    <a href="../../Admin/data-kandidat/kandidat.php" class="btn btn-outline-secondary btn-primary">
+                        <p class="card-text text-light"> Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <form action="" method="post">
-            <div class="mb-3">
-                <label for="id_kandidat" class="form-label text-dark">ID Kandidat</label>
-                <input type="text" name="id_kandidat" id="id_kandidat" required class="form-control" placeholder="192010394">
-            </div>
-            <div class="mb-3">
-                <label for="TextInput" class="form-label text-dark">Nama Kandidat</label>
-                <input type="text" name="nama_kandidat" id="nama_kandidat" class="form-control" placeholder="Ghaida Fasya">
-            </div>
-            <div class="mb-3">
-                <label for="inputpassword5" class="form-label text-dark">NPM</label>
-                <input type="text" name="npm" id="npm" class="form-control" placeholder="714220031">
-            </div>
-            <div class="mb-3">
-                <label for="img" class="form-label text-dark">Program Studi</label>
-                <input type="text" name="prodi" id="prodi" class="form-control" placeholder="D4 Teknik Informatika">
-            </div>
-            <div class="mb-3">
-                <label for="inputpassword5" class="form-label text-dark">Jabatan</label>
-                <br>
-                <select id="disabledSelect" class="form-label text-dark">
-                    <option hidden aria-disabled="">Pilih Jabatan</option>
-                    <option>Ketua</option>
-                    <option>Wakil</option>
-                </select>
-                <div class="mb-3">
-                    <label for="inputpassword5" class="form-label text-dark">Visi & Misi</label>
-                    <input type="text" name="visi_misi" id="visi_misi" class="form-control" placeholder="...">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="img" class="form-label text-dark">Foto</label>
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                </div>
-            </div>
-            <div class="mb-3">
-                <a href="#" type="submit" name="submit" class="btn btn-info text-light">Submit</a>
-                <a href="../data-kandidat/kandidat.php" class="btn btn-success">Kembali</a>
-        </form>
     </div>
-
+    <!-- dashboard end  -->
 
 </body>
 

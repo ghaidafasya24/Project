@@ -50,23 +50,67 @@
     }
 
 
-    function tambah($data) {
+    // function tambah($data) {
+    //     global $connect;
+
+    //     $id_kandidat = $data["id_kandidat"];
+    //     $nama_kandidat = $data["nama_kandidat"];
+    //     $npm = $data["npm"];
+    //     $jabatan = $data["jabatan"];
+    //     $visi_misi = $data["visi_misi"];
+    //     $prodi = $data["prodi"];
+    //     $img = $data["img"];
+
+    //     // query insert 
+    //     $query = "INSERT INTO kandidat VALUES ('$id_kandidat','$nama_kandidat','$npm','$jabatan','$visi_misi','$prodi','$img')";
+    //     mysqli_query($connect,$query);
+
+    //     return mysqli_affected_rows($connect);
+    // }
+
+
+    function vote($data) {
         global $connect;
 
-        $id_kandidat = $data["id_kandidat"];
-        $nama_kandidat = $data["nama_kandidat"];
-        $npm = $data["npm"];
-        $jabatan = $data["jabatan"];
-        $visi_misi = $data["visi_misi"];
-        $prodi = $data["prodi"];
-        $img = $data["img"];
+        $nama_pemilih = $data["nama_pemilih"];
+        $pilihan = $data["pilihan"];
+        $tanggal = $data["tanggal"];
 
         // query insert 
-        $query = "INSERT INTO kandidat VALUES ('$id_kandidat','$nama_kandidat','$npm','$jabatan','$visi_misi','$prodi','$img')";
+        $query = "INSERT INTO hasil VALUES ('','$nama_pemilih','$pilihan','$tanggal')";
         mysqli_query($connect,$query);
 
         return mysqli_affected_rows($connect);
     }
 
+    function ubah($data) {
+        global $connect;
+    
+        $id      = $data["id"];
+        $nama_pemilih = $data["nama_pemilih"];
+        $pilihan = $data["pilihan"];
+        $tanggal = $data["tanggal"];
+    
+        //query insert
+        $query = "UPDATE hasil SET 
+                    nama_pemilih     = '$nama_pemilih',
+                    pilihan    = '$pilihan',
+                    tanggal  = '$tanggal'
+    
+                  WHERE id = $id  
+        
+                ";
+        mysqli_query($connect, $query);
+    
+        return mysqli_affected_rows($connect);
+    }
+
+
+    function hapus($id) {
+        global $connect;
+        mysqli_query($connect, "DELETE FROM hasil WHERE id = $id");
+    
+        return mysqli_affected_rows($connect);
+    }
 
 ?>
