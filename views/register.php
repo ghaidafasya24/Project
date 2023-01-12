@@ -32,7 +32,7 @@
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
 
-	<h1><marquee behavior="smooth" direction=""> Register Terlebih Dahulu</marquee></h1>
+	<h1><marquee behavior="smooth" direction=""> Register Terlebih Dahulu </marquee></h1>
  
 	<div class="kotak_login">
         <center>
@@ -50,7 +50,7 @@
 			<label for="confirm-password">Confirm Password</label>
 			<input type="password" name="confirm_password" class="form_login" placeholder="confirm your password..." id="confirm-password" required="required">
  
-			<input type="submit" class="tombol_login" name="regis" value="Regis">
+			<input type="submit" class="tombol_login" name="regis" value="Register">
  
             <p align="center">Already have an account? <a href="login.php">Login</a> here</p>
             <hr>

@@ -1,5 +1,5 @@
 <?php 
-
+    // koneksi ke database
     $connect = mysqli_connect("localhost", "root", "", "vote"); ;
 
     function query($query) {
@@ -12,6 +12,7 @@
         return $rows;
     }
 
+    // Function registrasi
     function regis($data) {
         global $connect;
         
@@ -46,7 +47,6 @@
         mysqli_query($connect, "INSERT INTO user VALUES ('', '$username', '$password', '')");
 
         return mysqli_affected_rows($connect);
-
     }
 
 
@@ -69,12 +69,13 @@
     // }
 
 
+    // Tambah data vote
     function vote($data) {
         global $connect;
 
         $nama_pemilih = $data["nama_pemilih"];
-        $pilihan = $data["pilihan"];
-        $tanggal = $data["tanggal"];
+        $pilihan      = $data["pilihan"];
+        $tanggal      = $data["tanggal"];
 
         // query insert 
         $query = "INSERT INTO hasil VALUES ('','$nama_pemilih','$pilihan','$tanggal')";
@@ -83,19 +84,20 @@
         return mysqli_affected_rows($connect);
     }
 
+    // Edit data vote
     function ubah($data) {
         global $connect;
     
-        $id      = $data["id"];
-        $nama_pemilih = $data["nama_pemilih"];
-        $pilihan = $data["pilihan"];
-        $tanggal = $data["tanggal"];
+        $id             = $data["id"];
+        $nama_pemilih   = $data["nama_pemilih"];
+        $pilihan        = $data["pilihan"];
+        $tanggal        = $data["tanggal"];
     
         //query insert
         $query = "UPDATE hasil SET 
-                    nama_pemilih     = '$nama_pemilih',
-                    pilihan    = '$pilihan',
-                    tanggal  = '$tanggal'
+                    nama_pemilih  = '$nama_pemilih',
+                    pilihan       = '$pilihan',
+                    tanggal       = '$tanggal'
     
                   WHERE id = $id  
         
@@ -105,7 +107,7 @@
         return mysqli_affected_rows($connect);
     }
 
-
+    // Hapus data vote
     function hapus($id) {
         global $connect;
         mysqli_query($connect, "DELETE FROM hasil WHERE id = $id");

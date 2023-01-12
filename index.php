@@ -16,6 +16,12 @@
 </head>
 <body>
 
+<style>
+    .gaguna {
+        color: rgba(191,195,199,0.89);
+    }
+</style>
+
 
     <!-- content navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="mainNav">
@@ -48,9 +54,13 @@
 <div class="card text-white text-justify" id="contactus">
           <div class="card-body bg-dark">
             <img src="assets/images/logo-ulbi.png" width="150" height="80" alt="Logo" class="d-inline-block align-text-top">
-            <h5 class="card-title mt-4">Lokasi</h5>
-            <p class="card-text">Yayasan Pendidikan Bhakti Pos Indonesia (​YPBPI)
-              Jalan Sariasih No. 54 Sarijadi Bandung, 40151, Jawa Barat Indonesia</p>
+            <h5 class="card-title mt-4">Kelompok 9</h5>
+            <p class="card-text">
+              <ol>
+                <li>Ghaida Fasya Yuthika Afifah</li>
+                <li class="gaguna">Arya Rizky Dwi Putra</li>
+              </ol>
+            </p>
             <div class="d-flex gap-3 text-center">
               <a href="https://wa.me/628112397778" class="nav-link active"><i class="fa-brands fa-whatsapp"></i></a>
               <a href="https://www.instagram.com/ulbi.official/" class="nav-link active"><i
@@ -62,7 +72,7 @@
                   class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
-          <h5 class="card-header text-center bg-dark text-white">© 2022 ‧ Universitas Logistik dan Bisnis Internasional (ULBI). All rights reserved.</h5>
+          <h5 class="card-header text-center bg-dark text-white">© 2023 ‧ Universitas Logistik dan Bisnis Internasional (ULBI). All rights reserved.</h5>
         </div>
 <!-- footer end  -->
 </body>

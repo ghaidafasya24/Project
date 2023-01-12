@@ -65,7 +65,7 @@ if (isset($_POST["submit"])) {
 
 
             <div class="mb-3">
-                <button type="submit" name="submit" class="btn btn-info text-light">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary text-light">Submit</button>
                 <a href="vote.php" class="btn btn-success">Kembali</a>
             </div>
         </form>

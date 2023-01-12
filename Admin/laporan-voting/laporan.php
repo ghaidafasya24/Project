@@ -43,8 +43,8 @@ $votes = query("SELECT * FROM hasil");
                 <ul class="navbar-nav">
                     <li class="navbar-item"><a href="../profile-admin/profile.php" class="nav-link active"> <i class="fa-solid fa-user"></i> Profile</a></li>
                     <hr>
-                    <li class="navbar-item"><a href="../dashboard/dashboard2.php" class="nav-link active"> <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
-                    <hr>
+                    <!-- <li class="navbar-item"><a href="../dashboard/dashboard.php" class="nav-link active"> <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
+                    <hr> -->
                     <!-- <li class="navbar-item"><a href="../data-kandidat/kandidat.php" class="nav-link active"> <i class="fa-solid fa-clipboard"></i> Data Kandidat</a></li>
                     <hr>
                     <li class="navbar-item"><a href="../data-mahasiswa/mahasiswa.php" class="nav-link active"><i class="fa-solid fa-users"></i> Data Mahasiswa</a></li>

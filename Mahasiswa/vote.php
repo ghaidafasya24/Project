@@ -76,12 +76,12 @@
 
         <div class="card text-center h">
             <div class="card-header">
-                Presma ULBI
+                E-Voting Presma ULBI
             </div>
             <div class="card-body">
                 <h5 class="card-title"> VOTE </h5>
                 <p class="card-text"><i>Semua orang berhak memilih dan dipilih.</i></p>
-                <a href="pilihan.php" class="btn btn-primary">Vote Disini</a>
+                <a href="pilihan.php" class="btn btn-dark">Vote Disini</a>
             </div>
             <div class="card-footer text-muted">
                 Universitas Logistik dan Bisnis Internasional
